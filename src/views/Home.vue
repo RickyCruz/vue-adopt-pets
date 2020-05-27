@@ -2,11 +2,17 @@
   <div class="home-view-container">
     <h1>Adopt a new best friend.</h1>
 
-    <div class="m-3">
-      <b-badge variant="dark" class="mr-2">Pets: {{ animalsCount }}</b-badge>
-      <b-badge variant="info" class="mr-2">Cats: {{ getAllCats.length }}</b-badge>
-      <b-badge variant="success" class="mr-2">Dogs: {{ getAllDogs.length }}</b-badge>
-    </div>
+    <p>
+      <font-awesome-icon icon="paw"/>
+      Total of Animals ready for Adoption: {{ animalsCount }}
+    </p>
+
+    <h3>
+      <font-awesome-icon icon="cat"/>
+      {{ getAllCats.length }} +
+      <font-awesome-icon icon="dog"/>
+      {{ getAllDogs.length }}
+    </h3>
 
     <button @click="togglePetForm" class="btn btn-primary mb-3">Add New Pet</button>
 
