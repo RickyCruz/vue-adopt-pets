@@ -1,3 +1,18 @@
 <template>
-  <div>Dogs</div>
+  <div>
+    <h1>Dogs for Adoption</h1>
+    <b-table striped hover responsive :items="dogs" />
+  </div>
 </template>
+
+<script>
+import dogs from '@/data/dogs'
+
+export default {
+  data () {
+    return {
+      dogs
+    }
+  }
+}
+</script>
