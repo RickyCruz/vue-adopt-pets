@@ -1,14 +1,14 @@
 <template>
-  <div class="home">
+  <div class="home-view-container">
     <h1>Adopt a new best friend.</h1>
 
-    <div>
-      <b-badge variant="dark">Pets: {{ animalsCount }}</b-badge>
-      <b-badge variant="info">Cats: {{ getAllCats.length }}</b-badge>
-      <b-badge variant="success">Dogs: {{ getAllDogs.length }}</b-badge>
+    <div class="m-3">
+      <b-badge variant="dark" class="mr-2">Pets: {{ animalsCount }}</b-badge>
+      <b-badge variant="info" class="mr-2">Cats: {{ getAllCats.length }}</b-badge>
+      <b-badge variant="success" class="mr-2">Dogs: {{ getAllDogs.length }}</b-badge>
     </div>
 
-    <button @click="togglePetForm" class="btn btn-primary">Add New Pet</button>
+    <button @click="togglePetForm" class="btn btn-primary mb-3">Add New Pet</button>
 
     <b-form @submit.prevent="handleSubmit" v-if="showPetForm">
       <b-form-group id="pet-name-group" label="Pet's Name:" label-for="pet-name">
@@ -33,7 +33,7 @@
           placeholder="Enter age" />
       </b-form-group>
 
-      <b-button type="submit" variant="primary">Submit</b-button>
+      <b-button type="submit" variant="primary" class="mr-2">Submit</b-button>
       <b-button type="reset" variant="danger">Reset</b-button>
     </b-form>
   </div>
