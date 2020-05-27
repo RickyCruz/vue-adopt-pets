@@ -4,14 +4,10 @@ export default {
   },
 
   getAllCats: (state) => {
-    return state.pets.filter(pet => {
-      return pet.species === 'cat'
-    })
+    return state.cats
   },
 
   getAllDogs: (state) => {
-    return state.pets.filter(pet => {
-      return pet.species === 'dog'
-    })
+    return state.dogs
   }
 }
